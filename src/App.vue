@@ -1,29 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<div>
+  <b-navbar variant="primary" type="light" fixed="top">
+    <b-container>
+      <b-row>
+        <b-col>
+        <b-navbar-brand href="#">Home</b-navbar-brand>
+        </b-col>
+      </b-row>
+    </b-container>
+  </b-navbar>
+  <div class="content">
+  <b-container>
+    <HomePage />
+  </b-container>
   </div>
+</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import HomePage from "@/page/HomePage.vue";
 
 @Component({
   components: {
-    HelloWorld,
+    HomePage,
   },
 })
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .content {
+    padding: 60px 0;
+  }
 </style>
