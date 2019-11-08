@@ -1,4 +1,6 @@
-import Vue from "vue";
+import "@babel/polyfill";
+import "mutationobserver-shim";
+import { Vue } from "@/vue-script";
 import App from "./App.vue";
 import store from "./store";
 
